@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jai Maa Durga 🙏</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #09020f;
+    color: #ffb52e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+h2 {
+    color: #ffbd45;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ff4500;
+    letter-spacing: 3px;
+}
+
+#art {
+    font-size: clamp(4px, 1.5vw, 9px);
+    line-height: 1.05;
+    font-weight: bold;
+    white-space: pre;
+    text-align: center;
+    text-shadow: 0 0 5px #ff7900;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffcf69;
+    opacity: 0;
+    transition: opacity 2s;
+    text-shadow: 0 0 12px #ff4500;
+}
+</style>
+</head>
+
+<body>
+
+<h2>🚩 जय माता दी 🚩</h2>
+
+<div id="art"></div>
+
+<div id="message">🙏 जय माँ दुर्गा 🙏</div>
+
+<script>
+const design = [
+"              •••••••••••••              ",
+"          •••••••••••••••••••          ",
+"        •••••••••••••••••••••••        ",
+"      •••••••••••••••••••••••••••      ",
+"     •••••••••••••••••••••••••••••     ",
+"    ••••••••••••🟠••••••••••••••••••    ",
+"   •••••••••••••••••••••••••••••••••   ",
+"  ••••••••••  •••••••••  •••••••••••  ",
+"  •••••••••   •••••••••   •••••••••••  ",
+"  •••••••••     •••••     •••••••••••  ",
+"  •••••••••••••••••••••••••••••••••••  ",
+"   •••••••••••••••••••••••••••••••••   ",
+"    •••••••••••••••••••••••••••••••    ",
+"     •••••••••••••••••••••••••••••     ",
+"      •••••••••••••••••••••••••••      ",
+"       •••••••••••••••••••••••••       ",
+"        •••••••••••••••••••••••        ",
+"         ••••••••••••••••••••          ",
+"          •••••••••••••••••            ",
+"           ••••••••••••••              ",
+"            •••••••••••                ",
+"             ••••••••                  ",
+"              •••••                    ",
+"               •••                     "
+];
+
+const art = document.getElementById("art");
+let row = 0;
+
+function draw() {
+    if (row < design.length) {
+        art.textContent += design[row] + "\n";
+        row++;
+        setTimeout(draw, 180);
+    } else {
+        document.getElementById("message").style.opacity = 1;
+    }
+}
+
+draw();
+</script>
+
+</body>
+</html>
